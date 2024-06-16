@@ -1,0 +1,141 @@
+version: '3'
+
+services:
+  host_container:
+    build: .
+    container_name: host_container
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_host:/usr/src/app/sync_files/private
+    ports:
+      - "5000:5000"
+
+  container_1:
+    build: .
+    container_name: container_1
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_1:/usr/src/app/sync_files/private
+    ports:
+      - "5001:5000"
+
+  container_2:
+    build: .
+    container_name: container_2
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_2:/usr/src/app/sync_files/private
+    ports:
+      - "5002:5000"
+
+  container_3:
+    build: .
+    container_name: container_3
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_3:/usr/src/app/sync_files/private
+    ports:
+      - "5003:5000"
+
+  container_4:
+    build: .
+    container_name: container_4
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_4:/usr/src/app/sync_files/private
+    ports:
+      - "5004:5000"
+
+  container_5:
+    build: .
+    container_name: container_5
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_5:/usr/src/app/sync_files/private
+    ports:
+      - "5005:5000"
+
+  container_6:
+    build: .
+    container_name: container_6
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_6:/usr/src/app/sync_files/private
+    ports:
+      - "5006:5000"
+
+  container_7:
+    build: .
+    container_name: container_7
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_7:/usr/src/app/sync_files/private
+    ports:
+      - "5007:5000"
+
+  container_8:
+    build: .
+    container_name: container_8
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_8:/usr/src/app/sync_files/private
+    ports:
+      - "5008:5000"
+
+  container_9:
+    build: .
+    container_name: container_9
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_9:/usr/src/app/sync_files/private
+    ports:
+      - "5009:5000"
+
+  container_10:
+    build: .
+    container_name: container_10
+    networks:
+      - synchrontainer_network
+    volumes:
+      - public_files:/usr/src/app/sync_files/public
+      - private_files_10:/usr/src/app/sync_files/private
+    ports:
+      - "5010:5000"
+
+networks:
+  synchrontainer_network:
+    driver: bridge
+
+volumes:
+  public_files:
+  private_files_host:
+  private_files_1:
+  private_files_2:
+  private_files_3:
+  private_files_4:
+  private_files_5:
+  private_files_6:
+  private_files_7:
+  private_files_8:
+  private_files_9:
+  private_files_10:
